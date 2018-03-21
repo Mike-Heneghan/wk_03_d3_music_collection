@@ -38,4 +38,25 @@ class Artist
     SqlRunner.run(sql)
   end
 
+  def self.delete_all()
+
+    sql = "
+    DELETE FROM artists
+    ;
+    "
+    SqlRunner.run(sql)
+
+  end
+
+  def self.all()
+
+    sql = "
+    SELECT * FROM artists
+    ;
+    "
+    result = SqlRunner.run(sql)
+    artist_objects = result.map { |artist_hash| Artist.new(artist_hash)  }
+    return artist_objects
+  end
+  
 end
