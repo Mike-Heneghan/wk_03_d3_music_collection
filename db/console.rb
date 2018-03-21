@@ -32,3 +32,19 @@ puts ""
 
 p album1.artist_of_album()
 puts ""
+
+album1.title = "Neon Bible"
+album1.edit()
+p Album.all()
+puts ""
+
+artist1.name = "Arcade Fire!"
+artist1.edit()
+p Artist.all()
+puts ""
+
+p Artist.find_by_id(26)
+puts ""
+
+p Album.find_by_id(26)
+puts ""
